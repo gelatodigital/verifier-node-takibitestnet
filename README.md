@@ -6,7 +6,7 @@
 2. [Delegating the Node Key](#delegating-the-node-key)
 3. [Getting a Gelato Relay API Key](#getting-a-gelato-relay-api-key)
 4. [Installation](#installation)
-5. [Running the node on a local machine](#running-the-node)
+5. [Running the node on a local machine](#running-the-node-on-a-local-machine)
    - [Saving settings](#saving-settings)
 6. [Running the node on a cloud provider](#running-the-node-on-a-cloud-provider)
 
