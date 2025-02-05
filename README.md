@@ -3,8 +3,8 @@
 ## Table of Contents
 
 1. [Smart Contracts](#smart-contracts)
-2. [Getting a Gelato Relay API Key](#getting-a-gelato-relay-api-key)
-3. [Delegating the Key](#delegating-the-key)
+2. [Delegating the Node Key](#delegating-the-node-key)
+3. [Getting a Gelato Relay API Key](#getting-a-gelato-relay-api-key)
 4. [Installation](#installation)
 5. [Running the node on a local machine](#running-the-node)
    - [Saving settings](#saving-settings)
@@ -19,6 +19,19 @@
 | Referee          | `0xEd570447B0034f430B0203BC29Aa3aE00321e312` |
 | DelegateRegistry | `0x00000000000000447e69651d841bD8D104Bed493` |
 
+## Delegating the Node Key
+
+After aquiring a node key, delegate rights to an `Operator` to sign attestation transactions on your behalf. This ensures secure and efficient operation of your node.
+
+- Navigate to [`DelegateRegistry.delegateERC721`](https://testnet.explorer.takibi.network/address/0x00000000000000447e69651d841bD8D104Bed493?tab=read_write_contract).
+- Fill in the required parameters:
+  - `to`: Operator address
+  - `contract_`: `0xFB1F01aC08Ae256d2b0B1111406d145Cf80149c3` (NodeKey address)
+  - `tokenId`: ID of node key NFT
+  - `rights`: `0x0000000000000000000000000000000000000000000000000000000000000000`
+  - `enable`: true
+  - `send native USDC`: 0
+
 ## Getting a Gelato Relay API Key
 
 The Gelato API Key is crucial for running the node as it allows the node to use Gelato Relay for transaction fees. This simplifies the process by enabling the use of various tokens (like USDC) to pay for gas fees.
@@ -30,19 +43,6 @@ To obtain the Gelato API Key:
 3. Click "Create App" and complete the basic details.
 4. After creating the app, go to the details and copy the API key.
 5. Deposit funds into your 1Balance.
-
-## Delegating the Key
-
-After aquiring a node key, delegate rights to an `Operator` to sign attestation transactions on your behalf. This ensures secure and efficient operation of your node.
-
-- Navigate to [`DelegateRegistry.delegateERC721`](https://testnet.explorer.takibi.network/address/0x00000000000000447e69651d841bD8D104Bed493?tab=read_write_contract).
-- Fill in the required parameters:
-  - `to`: Operator address
-  - `contract_`: `0xFB1F01aC08Ae256d2b0B1111406d145Cf80149c3` (NodeKey address)
-  - `tokenId`: ID of node key NFT
-  - `rights`: `0x0000000000000000000000000000000000000000000000000000000000000000`
-  - `enable`: true
-  - `send native CGT`: 0
 
 ## Installation
 
