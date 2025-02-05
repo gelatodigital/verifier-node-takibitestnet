@@ -10,7 +10,7 @@
    - [Saving settings](#saving-settings)
 6. [Running the node on a cloud provider](#running-the-node-on-a-cloud-provider)
 
-## Smart contracts (Edu Chain)
+## Smart contracts (Takibi Testnet)
 
 | Smart Contract   | Address                                      |
 | ---------------- | -------------------------------------------- |
@@ -135,7 +135,7 @@ The settings that are configurable are:
 
 The verifier node is also available as a Docker image. Follow these steps to run it on a server, for example, on GCP:
 
-1. Create a Cloud Run job pulling the `gelatodigital/verifier-node-educhain` image.
+1. Create a Cloud Run job pulling the `gelatodigital/verifier-node-takibitestnet` image.
 2. Set up the environment variables.
 
 ```
