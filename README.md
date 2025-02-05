@@ -4,10 +4,11 @@
 
 1. [Smart Contracts](#smart-contracts)
 2. [Getting a Gelato Relay API Key](#getting-a-gelato-relay-api-key)
-3. [Installation](#installation)
-4. [Running the node on a local machine](#running-the-node)
+3. [Delegating the Key](#delegating-the-key)
+4. [Installation](#installation)
+5. [Running the node on a local machine](#running-the-node)
    - [Saving settings](#saving-settings)
-5. [Running the node on a cloud provider](#running-the-node-on-a-cloud-provider)
+6. [Running the node on a cloud provider](#running-the-node-on-a-cloud-provider)
 
 ## Smart contracts (Edu Chain)
 
