@@ -9,6 +9,7 @@
 5. [Running the node on a local machine](#running-the-node-on-a-local-machine)
    - [Saving settings](#saving-settings)
 6. [Running the node on a cloud provider](#running-the-node-on-a-cloud-provider)
+7. [Claiming rewards](#claiming-rewards)
 
 ## Smart contracts (Takibi Testnet)
 
@@ -160,3 +161,27 @@ The verifier node is also available as a Docker image. Follow these steps to run
 ```
 
 3. Add a scheduler trigger to execute the container every 10 minutes.
+
+## Claiming rewards
+
+To claim rewards, call the `batchClaimReward` function on the Referee smart contract.
+
+```ts
+function batchClaimReward(uint256[] memory nodeKeyIds,uint256 numberOfBatches) external
+```
+
+With foundry cast:
+
+```
+$ cast calldata "batchClaimReward(uint256[],uint256)" ${nodeKeyIds} ${numberOfBatches}
+
+$ cast calldata "batchClaimReward(uint256[],uint256)" \[1,2,3\] 50
+```
+
+You will get the payload to call that looks like `0x615668e0000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000320000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003`
+
+Send a transaction to the Referee contract with the payload:
+
+```
+ $ cast send --rpc-url ${takibi-testnet-rpc-url} --private-key ${privateKey} 0xEd570447B0034f430B0203BC29Aa3aE00321e312 ${payload}
+```
